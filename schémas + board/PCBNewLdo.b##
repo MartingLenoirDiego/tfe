@@ -3454,11 +3454,11 @@ Your Multi-CB Team
 <vertex x="17.12" y="0.100125"/>
 </polygon>
 <polygon width="0.3048" layer="1">
-<vertex x="17.16" y="58.26"/>
+<vertex x="17.06" y="58.26"/>
 <vertex x="102.62" y="58.26"/>
 <vertex x="102.62" y="0.17"/>
 <vertex x="102.56" y="0.11"/>
-<vertex x="17.16" y="0.11"/>
+<vertex x="17.06" y="0.11"/>
 </polygon>
 <wire x1="44.965" y1="20.47" x2="47.22" y2="20.47" width="0.3048" layer="1"/>
 <wire x1="47.22" y1="20.47" x2="47.38" y2="20.31" width="0.3048" layer="1"/>

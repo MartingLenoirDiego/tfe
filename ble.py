@@ -1,9 +1,8 @@
-from asyncore import read
+
 import serial
 import keyboard
 import matplotlib.pyplot as plt
 import numpy as np
-import time
 
 x = np.linspace(0, 10, 100)
 y = np.cos(x)
@@ -19,7 +18,7 @@ plt.xlabel("X",fontsize=18)
 plt.ylabel("sinX",fontsize=18)
 
 datas = []
-s = serial.Serial('COM6')
+s = serial.Serial('COM5')
 s.baudrate = 115200
 count = 0
 while True:
@@ -29,7 +28,6 @@ while True:
         temp = s.read_all().decode("UTF-8")
         data = ''
         for i in temp:
-            print(i)
             data = data + i
             if i == '*':
                 data = data.replace('*','')

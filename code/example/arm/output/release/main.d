@@ -1,0 +1,14 @@
+.\output\release\main.o: ..\source\main.c
+.\output\release\main.o: ..\source\mcu.h
+.\output\release\main.o: ..\..\example\source\config\RTE_Device.h
+.\output\release\main.o: ..\..\common\apollo3.h
+.\output\release\main.o: ..\..\cmsis\include\core_cm4.h
+.\output\release\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\release\main.o: ..\..\cmsis\include\cmsis_version.h
+.\output\release\main.o: ..\..\cmsis\include\cmsis_compiler.h
+.\output\release\main.o: ..\..\cmsis\include\cmsis_armcc.h
+.\output\release\main.o: ..\..\cmsis\include\mpu_armv7.h
+.\output\release\main.o: ..\..\common\system_apollo3.h
+.\output\release\main.o: ..\..\common\base_types.h
+.\output\release\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\release\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -6,9 +6,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000c0c1
 
-  Load Region LR_IROM1 (Base: 0x0000c000, Size: 0x000007f8, Max: 0x000f4000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x0000c000, Size: 0x000007f4, Max: 0x000f4000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x0000c000, Load base: 0x0000c000, Size: 0x000007f0, Max: 0x000f4000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x0000c000, Load base: 0x0000c000, Size: 0x000007ec, Max: 0x000f4000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -64,32 +64,32 @@ Memory Map of the image
     0x0000c15e   0x0000c15e   0x00000004   Code   RO          236    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
     0x0000c162   0x0000c162   0x00000006   Code   RO          237    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0000c168   0x0000c168   0x00000040   Code   RO            4    .text               system_apollo3.o
-    0x0000c1a8   0x0000c1a8   0x00000340   Code   RO           59    .text               main.o
-    0x0000c4e8   0x0000c4e8   0x00000070   Code   RO          109    .text               startup_apollo3.o
-    0x0000c558   0x0000c558   0x00000028   Code   RO          117    .text               c_w.l(noretval__2sprintf.o)
-    0x0000c580   0x0000c580   0x00000068   Code   RO          119    .text               c_w.l(__printf.o)
-    0x0000c5e8   0x0000c5e8   0x00000078   Code   RO          121    .text               c_w.l(_printf_dec.o)
-    0x0000c660   0x0000c660   0x00000006   Code   RO          145    .text               c_w.l(heapauxi.o)
-    0x0000c666   0x0000c666   0x000000b2   Code   RO          150    .text               c_w.l(_printf_intcommon.o)
-    0x0000c718   0x0000c718   0x00000030   Code   RO          152    .text               c_w.l(_printf_char_common.o)
-    0x0000c748   0x0000c748   0x0000000a   Code   RO          154    .text               c_w.l(_sputc.o)
-    0x0000c752   0x0000c752   0x0000004a   Code   RO          174    .text               c_w.l(sys_stackheap_outer.o)
-    0x0000c79c   0x0000c79c   0x00000012   Code   RO          176    .text               c_w.l(exit.o)
-    0x0000c7ae   0x0000c7ae   0x00000002   PAD
-    0x0000c7b0   0x0000c7b0   0x00000008   Code   RO          184    .text               c_w.l(libspace.o)
-    0x0000c7b8   0x0000c7b8   0x0000000c   Code   RO          245    .text               c_w.l(sys_exit.o)
-    0x0000c7c4   0x0000c7c4   0x00000002   Code   RO          256    .text               c_w.l(use_no_semi.o)
-    0x0000c7c6   0x0000c7c6   0x00000000   Code   RO          258    .text               c_w.l(indicate_semi.o)
-    0x0000c7c6   0x0000c7c6   0x0000000a   Code   RO          243    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x0000c7d0   0x0000c7d0   0x00000020   Data   RO          313    Region$$Table       anon$$obj.o
+    0x0000c1a8   0x0000c1a8   0x0000033c   Code   RO           59    .text               main.o
+    0x0000c4e4   0x0000c4e4   0x00000070   Code   RO          109    .text               startup_apollo3.o
+    0x0000c554   0x0000c554   0x00000028   Code   RO          117    .text               c_w.l(noretval__2sprintf.o)
+    0x0000c57c   0x0000c57c   0x00000068   Code   RO          119    .text               c_w.l(__printf.o)
+    0x0000c5e4   0x0000c5e4   0x00000078   Code   RO          121    .text               c_w.l(_printf_dec.o)
+    0x0000c65c   0x0000c65c   0x00000006   Code   RO          145    .text               c_w.l(heapauxi.o)
+    0x0000c662   0x0000c662   0x000000b2   Code   RO          150    .text               c_w.l(_printf_intcommon.o)
+    0x0000c714   0x0000c714   0x00000030   Code   RO          152    .text               c_w.l(_printf_char_common.o)
+    0x0000c744   0x0000c744   0x0000000a   Code   RO          154    .text               c_w.l(_sputc.o)
+    0x0000c74e   0x0000c74e   0x0000004a   Code   RO          174    .text               c_w.l(sys_stackheap_outer.o)
+    0x0000c798   0x0000c798   0x00000012   Code   RO          176    .text               c_w.l(exit.o)
+    0x0000c7aa   0x0000c7aa   0x00000002   PAD
+    0x0000c7ac   0x0000c7ac   0x00000008   Code   RO          184    .text               c_w.l(libspace.o)
+    0x0000c7b4   0x0000c7b4   0x0000000c   Code   RO          245    .text               c_w.l(sys_exit.o)
+    0x0000c7c0   0x0000c7c0   0x00000002   Code   RO          256    .text               c_w.l(use_no_semi.o)
+    0x0000c7c2   0x0000c7c2   0x00000000   Code   RO          258    .text               c_w.l(indicate_semi.o)
+    0x0000c7c2   0x0000c7c2   0x0000000a   Code   RO          243    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0000c7cc   0x0000c7cc   0x00000020   Data   RO          313    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x0000c7f0, Size: 0x00000c68, Max: 0x0005fff0, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x10000000, Load base: 0x0000c7ec, Size: 0x00000c68, Max: 0x0005fff0, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x10000000   0x0000c7f0   0x00000004   Data   RW            5    .data               system_apollo3.o
-    0x10000004   0x0000c7f4   0x00000004   Data   RW           60    .data               main.o
+    0x10000000   0x0000c7ec   0x00000004   Data   RW            5    .data               system_apollo3.o
+    0x10000004   0x0000c7f0   0x00000004   Data   RW           60    .data               main.o
     0x10000008        -       0x00000060   Zero   RW          185    .bss                c_w.l(libspace.o)
     0x10000068        -       0x00000800   Zero   RW          107    HEAP                startup_apollo3.o
     0x10000868        -       0x00000400   Zero   RW          106    STACK               startup_apollo3.o

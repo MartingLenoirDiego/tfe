@@ -235,7 +235,7 @@ int main(void)
     //application initialization area
 
     GPIO->PADKEY = 0x73; //unlock GPIO configuration
-    GPIO->PADREGD_b.PAD13FNCSEL = GPIO_PADREGD_PAD13FNCSEL_ADCD0PSE8; //select ADC8 at PAD13
+    GPIO->PADREGI_b.PAD32FNCSEL = GPIO_PADREGI_PAD32FNCSEL_ADCSE4; //select ADC8 at PAD13
     GPIO->PADKEY = 0;
 
     //
@@ -259,8 +259,8 @@ int main(void)
     // Using slot 0
     //
     ADC->SL0CFG = 0; 
-    ADC->SL0CFG_b.CHSEL0 = ADC_SL0CFG_CHSEL0_SE8; //use ADCSE8 as input;
-    ADC->SL0CFG_b.ADSEL0 = ADC_SL0CFG_ADSEL0_AVG_16_MSRMTS; //Avaerage over 16 measurements
+    ADC->SL0CFG_b.CHSEL0 = ADC_SL0CFG_CHSEL0_SE4; //use ADCSE8 as input;
+    ADC->SL0CFG_b.ADSEL0 = ADC_SL0CFG_ADSEL0_AVG_1_MSRMT; //Avaerage over 16 measurements
     ADC->SL0CFG_b.PRMODE0 = ADC_SL0CFG_PRMODE0_P14B; //use 14-bit 1.2MS/s
     ADC->SL0CFG_b.WCEN0 = 0; //window comparator mode disabled
     ADC->SL0CFG_b.SLEN0 = 1; //slot enabled
@@ -282,7 +282,7 @@ int main(void)
 
 
 
-    UartInit(UART0,115200);                //init UART with 115200 baud
+    UartInit(UART0,230400);                //init UART with 115200 baud
 
     GPIO->PADKEY = 0x00000073;            //unlock pin selection
     
@@ -304,9 +304,10 @@ int main(void)
             if ((_FLD2VAL(ADC_FIFO_COUNT,ADC->FIFO) > 0) && (_FLD2VAL(ADC_FIFO_SLOTNUM,ADC->FIFO) == 0))
             {
                 u32Data = _FLD2VAL(ADC_FIFO_DATA,ADC->FIFO) >> 6;
-								sprintf(data, "%d",u32Data);
+								sprintf(data, "%d-",u32Data);
 								PutStringUart(UART0,data);
                 ADC->FIFO = 0; // pop FIFO
+								
             }
         } 
 				if (ADC->INTSTAT_b.SCNCMP == 1)

@@ -5,9 +5,9 @@ import sys
 
 
 def read():
-    datas = []
     s = serial.Serial('COM'+sys.argv[1])
     s.baudrate = 230400
+    datas = []
     data = ''
     count = 0
     countExit = 0

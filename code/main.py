@@ -13,7 +13,7 @@ def read():
     countExit = 0
     while True:
         countExit = countExit + 1
-        if countExit == 15000:
+        if countExit == 150000:
             return False,False
             
         temp = s.read_all().decode("UTF-8")
@@ -25,12 +25,12 @@ def read():
                     data = ''
                 else:
                     data += i
-                if count == 100:
+                if count == 1000:
                     fin = False
                     print(len(datas))
                     return fin,datas
 def graph(datas):
-    x=np.linspace(0,10,100)
+    x=np.linspace(0,10,1000)
     plt.plot(x,datas)  
     plt.ylabel('Tension')
     plt.xlabel("")

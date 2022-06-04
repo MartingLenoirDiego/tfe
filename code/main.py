@@ -10,12 +10,12 @@ def read():
     s.baudrate = 230400
     data = ''
     count = 0
-    exit = 0
+    countExit = 0
     while True:
-        exit = exit + 1
-        if exit == 15000:
-            print("Port COM incorrect")
-            quit()
+        countExit = countExit + 1
+        if countExit == 15000:
+            return False,False
+            
         temp = s.read_all().decode("UTF-8")
         if temp != '':
             for i in temp:
@@ -46,6 +46,10 @@ if __name__ == "__main__":
         except:
             count = count+1
             if count == 20:
-                quit()
+                print("Port COM incorrect")
+                sys.exit()
+    if datas == False:
+        print("Port COM incorrect")
+        sys.exit()
     graph(datas)
     

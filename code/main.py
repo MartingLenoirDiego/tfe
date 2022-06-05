@@ -9,7 +9,6 @@ def read():
     s.baudrate = 230400
     datas = []
     data = ''
-    count = 0
     countExit = 0
     while True:
         countExit = countExit + 1
@@ -25,10 +24,8 @@ def read():
                     data = ''
                 else:
                     data += i
-                if count == 1000:
-                    fin = False
-                    print(len(datas))
-                    return fin,datas
+                if len(datas)==1000:
+                    return False,datas
 def graph(datas):
     x=np.linspace(0,10,1000)
     plt.plot(x,datas)  

@@ -20,8 +20,8 @@
 * compilation, or representation of this Software requires written             *
 * permission of Fujitsu.                                                       *
 *                                                                              *
-* NO WARRANTY: This software is provided “as-is” with no warranty of any kind  *
-* (German “Unter Ausschluss jeglicher Gewähleistung”), express or implied,     *
+* NO WARRANTY: This software is provided ï¿½as-isï¿½ with no warranty of any kind  *
+* (German ï¿½Unter Ausschluss jeglicher Gewï¿½hleistungï¿½), express or implied,     *
 * including but not limited to non-infringement of third party rights,         *
 * merchantability and fitness for use.                                         *
 *                                                                              *
@@ -41,12 +41,10 @@
 /******************************************************************************/
 /** \file main.c
  **
- ** \brief Simple UART example
+ ** \brief UART + ADC for Apollo3
  **
  ** Main Module
  **
- ** History:
- ** 2019-03-19  V1.0.0  LEh first version
  **
  ******************************************************************************/
 
@@ -235,7 +233,7 @@ int main(void)
     //application initialization area
 
     GPIO->PADKEY = 0x73; //unlock GPIO configuration
-    GPIO->PADREGI_b.PAD32FNCSEL = GPIO_PADREGI_PAD32FNCSEL_ADCSE4; //select ADC8 at PAD13
+    GPIO->PADREGI_b.PAD32FNCSEL = GPIO_PADREGI_PAD32FNCSEL_ADCSE4; //select ADC4 at PAD32
     GPIO->PADKEY = 0;
 
     //
